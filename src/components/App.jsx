@@ -5,6 +5,7 @@ import Banner from './Banner'
 import Cart from './Cart'
 import ShoppingList from './ShoppingList'
 import Footer from './Footer'
+import ToogleColorMode from './ColorMode.jsx'
 
 
 // Fichier de mon composant
@@ -13,8 +14,10 @@ const App = () => {
 
   return (
     <>
+
       <Banner />
       <>
+      <ToogleColorMode />
       <ShoppingList cart={cart} updateCart={updateCart} />
       <Cart cart={cart} updateCart={updateCart} />
       </>
