@@ -1,11 +1,10 @@
 // Fichier où vous utiliserez votre composant 
-// Import correspondant pour pouvoir l'utiliser avec la syntaxe JSX <Banner />
+// Import correspondant pour pouvoir l'utiliser avec la syntaxe JSX <Banner /> et les autres composants
 import { useState } from 'react'
 import Banner from './Banner'
 import Cart from './Cart'
 import ShoppingList from './ShoppingList'
 import Footer from './Footer'
-
 
 // Fichier de mon composant
 const App = () => {
@@ -22,6 +21,5 @@ const App = () => {
     </>
   )
 }
-
 //Export par défaut
 export default App
