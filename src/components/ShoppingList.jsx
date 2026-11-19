@@ -3,6 +3,11 @@ import { plantList } from '../datas/plantList'
 import PlantItem from './PlantItem'
 import Categories from './Categories'
 import '../styles/ShoppingList.css'
+import IconButton from '@mui/material/IconButton';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+
+
 
 const ShoppingList = ({ cart, updateCart }) => {
 	const [activeCategory, setActiveCategory] = useState('')
@@ -45,7 +50,10 @@ const ShoppingList = ({ cart, updateCart }) => {
 								light={light}
 								price={price}
 							/>
-							<button onClick={() => addToCart(name, price)}>Ajouter</button>
+								<IconButton onClick={() => addToCart(name, price)}>
+									<ShoppingCartIcon fontSize="small" />
+								</IconButton>
+
 						</div>
 					) : null
 				)}

@@ -1,6 +1,9 @@
 import { useState,useEffect} from 'react'
-
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 import '../styles/Cart.css'
+
+
 
 const Cart = ({cart, updateCart}) => {
     const [isOpen, setIsOpen] = useState(true)
@@ -8,9 +11,9 @@ const Cart = ({cart, updateCart}) => {
         (acc, plantType) => acc + plantType.amount * plantType.price,
         0
     )
-    useEffect(() => {
+    /*useEffect(() => {
     alert(`J'aurai ${total}€ à payer 💸`)
-    },[total])
+    },[total])*/
     return isOpen ? (
         <div className='lmj-cart'>
             <button
@@ -30,7 +33,7 @@ const Cart = ({cart, updateCart}) => {
                         ))}
                     </ul>
                     <h3>Total :{total}€</h3>
-                    <button onClick={() => updateCart([])}>Vider le panier</button>
+                    <Button variant='outlined' color="success" startIcon ={<DeleteIcon/>} onClick={() => updateCart([])}>Vider le panier</Button>
                 </div>
             ) : (
                 <div>Votre panier est vide</div>

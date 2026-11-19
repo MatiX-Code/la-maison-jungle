@@ -6,6 +6,7 @@ import Cart from './Cart'
 import ShoppingList from './ShoppingList'
 import Footer from './Footer'
 
+
 // Fichier de mon composant
 const App = () => {
   const [cart, updateCart] = useState([])
